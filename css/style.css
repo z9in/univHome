@@ -1,11 +1,314 @@
 /* style.css */
 
-/* css에서 외부 style문서 불러오기 */
-@import "default.css";
+/* 웹 폰트: Crimson, noto sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+/* css에서 style 문서 불러오기 */
+@import "./reset.css"; 
 
+/*  
+font-family: 'Crimson Text', serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+:root {
+  --main_color : #0c2d83;
+  --bg_color-_ight : #f5f5f5;
+  --text_light : #666;
+  --text_dark : #444;
+  --white : #fff;
+}
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size : 15px;
+  background-color: var(--white);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000
 }
 h1 {
-    font-family: 'Crimson Text', serif;
+  font-family: 'Crimson Text', serif;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 20px;
+}
+.container {
+  max-width: 1440px;
+  /* outline: 2px solid #333; */
+  margin: 0 auto;
+  position: relative;
+}
+#main_header {
+  height: 80px;
+  /* background-color: lightblue; */
+  /* width: 1440px;
+  /* outline: 2px solid #333; */
+  /* margin: 0 auto;
+  position: relative; */
+}
+#main_header h1 {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+@media screen and (max-width : 1000px) {
+  #main_header #gnb {
+      display: none;
+  }   
+}
+#gnb {
+  position: absolute;
+  right: 97px;
+  top: 28px;
+  z-index: 10;  
+  display: flex;
+  justify-content: space-between;
+}
+/* 1단계 */
+#gnb .depth1 {
+  display: flex;
+}
+#gnb .depth1 > li {
+  margin-left: 30px;
+  /* outline: 1px solid #000; */
+  width: 110px;
+  text-align: center;
+}
+#gnb .depth1 > li > a {
+  font-weight: 500;
+  font-size: 1.1rem;
+  
+  
+}
+/* 2단계 */
+#gnb .depth2 {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  /* margin-top: 28px; */
+  /* display: none; */
+  max-height: 0;
+  text-align: left;  
+  opacity: 0;
+  transition: 0.5s;
+}
+#gnb .depth2 > li {
+  margin-bottom: 10px;
+}
+/* hover 액션 */
+#gnb .depth1 > li:hover > .depth2 {
+  /* display: block; */
+ max-height: 200px;
+ opacity: 1;
+}
+#gnb .depth1 > li > a:hover {
+  color: var(--main_color);
+}
+#gnb .depth2 > li > a:hover {
+  text-decoration: underline;
+}
+#main_header .btn_toggle {
+  position: absolute;
+  right: 28px;
+  top: 25px;
+}
+/* 메인배너 */
+#main_banner {
+  height: 480px;
+  /* background-color: #666; */
+}
+#main_banner > .container {
+  height: 100%;
+  background-image: url(../images/main-banner-e1.jpg);
+  display: flex;
+  align-items: center;
+  
+}
+#main_banner h1 {
+  color: white;
+  padding-left: 56px;
+  font-size: 60px;
+  font-weight: 400;
+}
+/* 인트로 */
+#Intro > .container {
+  max-width: 1440px;
+  /* outline: 1px solid red; */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+}
+#Intro > .container > h1 {
+  margin-bottom: 10px;
+}
+#Intro > .container > ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+#Intro > .container > ul > li{
+  /* 너비-칼럼여백(칼럼수-1)/칼럼수 */
+  width: calc((100% - 60px) / 4);
+}
+#Intro a  img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+#Intro h2 {
+  margin-bottom: 10px;
+}
+/* notice */
+/* #notice {
+  background-color: var( --bg_color-_ight);
+} */
+#notice > #container {
+  background-color: var( --bg_color-_ight);
+  /* outline: 1px solid red; */
+  width: 1440px;
+  /* height: 300px; */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+#notice > #container > h1 {
+  margin-bottom: 10px;
+}
+#notice > #container > ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  
+}
+#notice > #container > ul > li {
+  width: calc((100% - 40px) / 3);
+  height: 250px;
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#notice #container .icon_group h3 {
+  margin-top: 25px;
+}
+.btn_more {
+  text-decoration: underline;
+}
+/* sns 배너 */
+/* #sns_banner {
+  background-image: url(../images/sns-banner-bg.jpg);
+} */
+#sns_banner .container {
+  background-image: url(../images/sns-banner-bg.jpg);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 70px;
+  height: 140px;
+  align-items: center;
+  color: white;
+}
+#sns_banner .container .banner_title h1 {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+#sns_banner .container .sns_icons a {
+  margin-left: 50px;
+}
+#main-footer {
+  /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
+  margin-top: 90px
+}
+#main-footer .container {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  width: 1440px;
+  padding: 50px 20px;
+  display: flex;
+}
+#main-footer .footer-menu {
+  margin-bottom: 15px;
+}
+#main-footer .footer-menu a {
+  font-size: 14px;
+  color: #444;
+}
+#main-footer address, .copy{
+  font-style: normal;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+/* 사이트 맵 메뉴 */
+.site-map-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 포지션 중앙정렬 */
+  left: 0;
+  top: 0;
+  /* 반만 땡김 */
+  /* transform: translate(-50%, -50%); */
+  z-index: 99;
+}
+.site-map-menu .container {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  /* 포지션 중앙정렬 */
+  left: 50%;
+  top: 50%;
+  /* 반만 땡김 */
+  transform: translate(-50%, -50%);
+  outline: 1px solid #333;
+}
+/* #site-menu {
+  outline: 1px solid #333;
+} */
+.site-map-menu {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+#site-menu ul.depth1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15%;
+  padding-top: 10%;
+  justify-content: center;
+
+}
+#site-menu ul.depth1 > li {
+  width: 33.33%;
+  margin-bottom: 10%;
+  /* outline: 1px solid red; */
+}
+#site-menu ul.depth1 > li > a {
+  font-size: 20px;
+  font-weight: bold;
+}
+#site-menu ul.depth2 > li {
+  text-align: left;
+}
+.site-map-menu .logo {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* outline: 1px solid black; */
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.close-btn {
+  border: transparent;
+  background-color:transparent;
 }

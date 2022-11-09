@@ -1,0 +1,238 @@
+/* sub.css */
+/* sub page용 타이틀(sub 공통) */
+.sub-content {
+    display: none;
+}
+#sub-main {
+    display: block;
+
+}
+
+table, th, td {
+    border-style: collapse;
+    
+}
+#sub-title {
+    height: 300px;
+    /* background-color: #999; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sub-title .container {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sub-title .container .box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sub-title h1 {
+    font-size: 40px;
+    font-family: 'Noto Sans KR',sans-serif;
+    color: white;
+}
+#lnb {
+    /* background-color: lightblue; */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lnb .container {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+}
+#lnb .container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lnb .container ul li{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.active {
+    font-weight: bold;
+}
+#section1 {
+    /* background-color: #999; */
+    /* width: 100%;
+    height: 240px; */
+    display: flex;
+}
+#section1 .container {
+    width: 1440px;
+    height: 100%;
+    padding: 50px;
+}
+#section1 .container h1 {
+    line-height: 1.3em;
+    margin-bottom: 20px;
+}
+#section1 .container p {
+    line-height: 1.5em;
+}
+#section2 {
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section2 .container {
+    /* outline: 1px solid #000; */
+    width: 1440px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+#section2 .container .item {
+    /* outline: 1px solid red; */
+    width: calc((100% - 40px) / 3);
+    height: calc(100%);
+    text-align: center;
+}
+#section2 .container .item > img{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 20px;
+}
+#section2 .container .item > p {
+    text-align: left;
+    margin-top: 20px;
+    line-height: 150%;
+}
+
+
+
+/* about */
+#about #sub-title .container {
+    background-image: url('../images/[크기변환]main-banner2.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sub-content {
+    display: none;
+}
+#sub-main {
+    display: block;
+}
+
+/* location */
+#location #sub-title .container {
+    background-image: url('../images/locationbg.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#map {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: #999; */
+}
+#location #map .container {
+    width: 1440px;
+    padding-top: 70px;
+}
+#location #map .container >iframe {
+    width: 100%;
+}
+#location .location-infom {
+    margin-top: 30px;
+    width: 1440px;
+    display: flex;
+    /* outline: 1px solid black; */
+}
+#location .location-info {
+    width: 65%;
+    /* outline: 1px solid black; */
+}
+#location .location-info > img {
+    width: 100%;
+    /* outline: 1px solid black; */
+}
+#location .adress {
+    width: 35%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+     padding-left: 20px;
+    /* outline: 1px solid black; */
+}
+th, td {
+    padding: 10px;
+    font-size: 16px;
+}
+th {
+    text-align: left;
+    vertical-align: top;
+    width: 100px;
+}
+
+/* introduce */
+#introduce #sub-title .container {
+    background-image: url('../images/[크기변환]main-banner2.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#introduce #section2 >.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid #ccc; */
+    padding-left: 50px;
+    /* outline: 1px solid #ccc; */
+}
+/* #introduce #section2 >.container > h2 {
+    outline: 1px solid #ccc;
+} */
+#introduce #section2 > .container .chroBox {
+    /* outline: 1px solid #ccc; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+}
+#introduce #section2 > .container .chro {
+    /* outline: 1px solid #ccc; */
+    width: 48%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+#introduce #section2 > .container .chro >h3 {
+    margin-bottom: 10px;
+    margin-right: 15px;
+   
+}
+#introduce #section2 > .container .chro >ul {
+    padding-left: 15px;
+    /* outline: 1px solid #ccc; */
+}
+#introduce #section2 > .container .chro >ul >li {
+    list-style-type:square;
+}
+
+
